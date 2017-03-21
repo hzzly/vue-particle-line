@@ -8,17 +8,17 @@
 
 ### **技术栈**
 前台:
-    > * vue-cli
-    > * vue
-    > * vue-router
-    > * webpak
-    > * canvas
-    > * ajax
+    > vue-cli
+    > vue
+    > vue-router
+    > webpak
+    > canvas
+    > ajax
 
 后台:
-    > * wamp
-    > * PHP(ThinkPHP)
-    > * mysql
+    > wamp
+    > PHP(ThinkPHP)
+    > mysql
 
 ### **功能说明**
 * 登录
@@ -92,6 +92,7 @@
 这个项目还没有完成，后期将不定期更新，敬请期待。。
 
 如果觉得还行，欢迎star
+
 **项目地址：** https://github.com/hzzly/canvas-vue
 
 
