@@ -3,22 +3,24 @@
 >又一个Vue+Cnavas酷炫的后台管理，依然前后端分离。
 
 **项目地址：** https://github.com/hzzly/canvas-vue
+
 **demo地址：** http://hjingren.cn/curriculum-design/
+
 欢迎大家的star啦~
 
 ### **技术栈**
 前台:
-   > vue-cli
-   > vue
-   > vue-router
-   > webpak
-   > canvas
-   > ajax
+   > vue-cli 
+   > vue 
+   > vue-router 
+   > webpak 
+   > canvas 
+   > ajax 
 
 后台:
-   > wamp
-   > PHP(ThinkPHP)
-   > mysql
+   > wamp 
+   > PHP(ThinkPHP) 
+   > mysql 
 
 ### **功能说明**
 * 登录
