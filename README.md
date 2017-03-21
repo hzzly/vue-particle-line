@@ -8,17 +8,17 @@
 
 ### **技术栈**
 前台:
-    > vue-cli
-    > vue
-    > vue-router
-    > webpak
-    > canvas
-    > ajax
+   > vue-cli
+   > vue
+   > vue-router
+   > webpak
+   > canvas
+   > ajax
 
 后台:
-    > wamp
-    > PHP(ThinkPHP)
-    > mysql
+   > wamp
+   > PHP(ThinkPHP)
+   > mysql
 
 ### **功能说明**
 * 登录
@@ -45,15 +45,15 @@
 
 > 1.登录注册模块，流星与星星为canvas，登录注册切换动画为vue transition
 
-![canvas-login](http://omt3u4bph.bkt.clouddn.com/canvas-login.gif)
+![canvas-login](http://omt3u4bph.bkt.clouddn.com/canvas-login.png)
 
 > 2. 后台管理页面，背景为canvas(会动的折线+跟着鼠标滑动) 功能模块切换为vue transition
 
-![admin](http://omt3u4bph.bkt.clouddn.com/admin.gif)
+![admin](http://omt3u4bph.bkt.clouddn.com/canvas-admin.png)
 
 > 3. 留言板(时间轴特效)
 
-![msgboard](http://omt3u4bph.bkt.clouddn.com/msgboard.gif)
+![msgboard](http://omt3u4bph.bkt.clouddn.com/msgboard.png)
 
 ### 目录结构
 
