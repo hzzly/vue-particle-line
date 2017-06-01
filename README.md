@@ -8,6 +8,8 @@
 
 欢迎大家的star啦~
 
+(服务器被勒索病毒破坏，后台数据也被破坏，暂时预览不了了，抱歉，可以把本项目和[后台项目](https://github.com/hzzly/canvas-vue-backstage)clone下面运行)
+
 ### **技术栈**
 前台:
    > vue-cli 
