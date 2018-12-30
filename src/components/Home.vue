@@ -1,15 +1,15 @@
 <template>
-	<div id="home">
-		<canvas id="canvas" class="canvas"></canvas>
-		<v-header></v-header>
-		
-		<div class="content">
-			<sidebar></sidebar>
-			<transition name="fade">
-		      	<router-view></router-view>
-		    </transition>
-		</div>
-	</div>
+  <div id="home">
+    <canvas id="canvas" class="canvas"></canvas>
+    <v-header></v-header>
+
+    <div class="content">
+      <sidebar></sidebar>
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -17,275 +17,272 @@
 import Header from 'components/Header'
 import Sidebar from 'components/Sidebar'
 
-// import Ban from '../../static/js/Ban'
-
 export default {
-	
-	data() {
-		return {
-			
-		}
-	},
-	mounted() {
-		var canvas = document.querySelector('canvas'),
-		ctx = canvas.getContext('2d')
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
-		ctx.lineWidth = .3;
-		ctx.strokeStyle = (new Color(150)).style;
+  data() {
+    return {
 
-		// var mousePosition = {
-		// 	x: 30 * canvas.width / 100,
-		// 	y: 30 * canvas.height / 100
-		// };
-		var mousePosition = {
-			x:  canvas.width - 100,
-			y:  canvas.height - 60
-		};
+    }
+  },
+  mounted() {
+    var canvas = document.querySelector('canvas'),
+      ctx = canvas.getContext('2d')
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.lineWidth = .3;
+    ctx.strokeStyle = (new Color(150)).style;
 
-		var dots = {
-			nb: 250,
-			distance: 100,
-			d_radius: 150,
-			array: []
-		};
+    // var mousePosition = {
+    // 	x: 30 * canvas.width / 100,
+    // 	y: 30 * canvas.height / 100
+    // };
+    var mousePosition = {
+      x: canvas.width - 100,
+      y: canvas.height - 60
+    };
 
-		function colorValue(min) {
-			return Math.floor(Math.random() * 255 + min);
-		}
+    var dots = {
+      nb: 250,
+      distance: 100,
+      d_radius: 150,
+      array: []
+    };
 
-		function createColorStyle(r,g,b) {
-			return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
-		}
+    function colorValue(min) {
+      return Math.floor(Math.random() * 255 + min);
+    }
 
-		function mixComponents(comp1, weight1, comp2, weight2) {
-			return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
-		}
+    function createColorStyle(r, g, b) {
+      return 'rgba(' + r + ',' + g + ',' + b + ', 0.8)';
+    }
 
-		function averageColorStyles(dot1, dot2) {
-			var color1 = dot1.color,
-			color2 = dot2.color;
+    function mixComponents(comp1, weight1, comp2, weight2) {
+      return (comp1 * weight1 + comp2 * weight2) / (weight1 + weight2);
+    }
 
-			var r = mixComponents(color1.r, dot1.radius, color2.r, dot2.radius),
-			g = mixComponents(color1.g, dot1.radius, color2.g, dot2.radius),
-			b = mixComponents(color1.b, dot1.radius, color2.b, dot2.radius);
-			return createColorStyle(Math.floor(r), Math.floor(g), Math.floor(b));
-		}
+    function averageColorStyles(dot1, dot2) {
+      var color1 = dot1.color,
+        color2 = dot2.color;
 
-		function Color(min) {
-			min = min || 0;
-			this.r = colorValue(min);
-			this.g = colorValue(min);
-			this.b = colorValue(min);
-			this.style = createColorStyle(this.r, this.g, this.b);
-		}
+      var r = mixComponents(color1.r, dot1.radius, color2.r, dot2.radius),
+        g = mixComponents(color1.g, dot1.radius, color2.g, dot2.radius),
+        b = mixComponents(color1.b, dot1.radius, color2.b, dot2.radius);
+      return createColorStyle(Math.floor(r), Math.floor(g), Math.floor(b));
+    }
 
-		function Dot(){
-			this.x = Math.random() * canvas.width;
-			this.y = Math.random() * canvas.height;
+    function Color(min) {
+      min = min || 0;
+      this.r = colorValue(min);
+      this.g = colorValue(min);
+      this.b = colorValue(min);
+      this.style = createColorStyle(this.r, this.g, this.b);
+    }
 
-			this.vx = -.5 + Math.random();
-			this.vy = -.5 + Math.random();
+    function Dot() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * canvas.height;
 
-			this.radius = Math.random() * 2;
+      this.vx = -.5 + Math.random();
+      this.vy = -.5 + Math.random();
 
-			this.color = new Color();
-		}
+      this.radius = Math.random() * 2;
 
-		Dot.prototype = {
-			draw: function(){
-				ctx.beginPath();
-				ctx.fillStyle = this.color.style;
-				ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-				ctx.fill();
-			}
-		};
+      this.color = new Color();
+    }
 
-		function createDots(){
-			for(var i = 0; i < dots.nb; i++){
-				dots.array.push(new Dot());
-			}
-		}
+    Dot.prototype = {
+      draw: function () {
+        ctx.beginPath();
+        ctx.fillStyle = this.color.style;
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fill();
+      }
+    };
 
-		function moveDots() {
-			for(var i = 0; i < dots.nb; i++){
+    function createDots() {
+      for (var i = 0; i < dots.nb; i++) {
+        dots.array.push(new Dot());
+      }
+    }
 
-				var dot = dots.array[i];
+    function moveDots() {
+      for (var i = 0; i < dots.nb; i++) {
 
-				if(dot.y < 0 || dot.y > canvas.height){
-					dot.vx = dot.vx;
-					dot.vy = - dot.vy;
-				}
-				else if(dot.x < 0 || dot.x > canvas.width){
-					dot.vx = - dot.vx;
-					dot.vy = dot.vy;
-				}
-				dot.x += dot.vx;
-				dot.y += dot.vy;
-			}
-		}
+        var dot = dots.array[i];
 
-		function connectDots() {
-			for(var i = 0; i < dots.nb; i++){
-				for(var j = 0; j < dots.nb; j++){
-					var i_dot = dots.array[i];
-					var j_dot = dots.array[j];
+        if (dot.y < 0 || dot.y > canvas.height) {
+          dot.vx = dot.vx;
+          dot.vy = - dot.vy;
+        }
+        else if (dot.x < 0 || dot.x > canvas.width) {
+          dot.vx = - dot.vx;
+          dot.vy = dot.vy;
+        }
+        dot.x += dot.vx;
+        dot.y += dot.vy;
+      }
+    }
 
-					if((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance){
-						if((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius){
-							ctx.beginPath();
-							ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
-							ctx.moveTo(i_dot.x, i_dot.y);
-							ctx.lineTo(j_dot.x, j_dot.y);
-							ctx.stroke();
-							ctx.closePath();
-						}
-					}
-				}
-			}
-		}
+    function connectDots() {
+      for (var i = 0; i < dots.nb; i++) {
+        for (var j = 0; j < dots.nb; j++) {
+          var i_dot = dots.array[i];
+          var j_dot = dots.array[j];
 
-		function drawDots() {
-			for(var i = 0; i < dots.nb; i++){
-				var dot = dots.array[i];
-				dot.draw();
-			}
-		}
+          if ((i_dot.x - j_dot.x) < dots.distance && (i_dot.y - j_dot.y) < dots.distance && (i_dot.x - j_dot.x) > - dots.distance && (i_dot.y - j_dot.y) > - dots.distance) {
+            if ((i_dot.x - mousePosition.x) < dots.d_radius && (i_dot.y - mousePosition.y) < dots.d_radius && (i_dot.x - mousePosition.x) > - dots.d_radius && (i_dot.y - mousePosition.y) > - dots.d_radius) {
+              ctx.beginPath();
+              ctx.strokeStyle = averageColorStyles(i_dot, j_dot);
+              ctx.moveTo(i_dot.x, i_dot.y);
+              ctx.lineTo(j_dot.x, j_dot.y);
+              ctx.stroke();
+              ctx.closePath();
+            }
+          }
+        }
+      }
+    }
 
-		function animateDots() {
-			ctx.clearRect(0, 0, canvas.width, canvas.height);
-			moveDots();
-			connectDots();
-			drawDots();
+    function drawDots() {
+      for (var i = 0; i < dots.nb; i++) {
+        var dot = dots.array[i];
+        dot.draw();
+      }
+    }
 
-			requestAnimationFrame(animateDots);	
-		}
+    function animateDots() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      moveDots();
+      connectDots();
+      drawDots();
 
-		//----------------------跟着鼠标动--------------------
-		document.getElementById('home').addEventListener('mousemove', function(e){
-			mousePosition.x = e.pageX;
-			mousePosition.y = e.pageY;
-		});
+      requestAnimationFrame(animateDots);
+    }
 
-		document.getElementById('home').addEventListener('mouseleave', function(e){
-			mousePosition.x = canvas.width / 2;
-			mousePosition.y = canvas.height / 2;
-		});
-		//----------------------跟着鼠标动--------------------
+    //----------------------跟着鼠标动--------------------
+    document.getElementById('home').addEventListener('mousemove', function (e) {
+      mousePosition.x = e.pageX;
+      mousePosition.y = e.pageY;
+    });
 
-		createDots();
-		requestAnimationFrame(animateDots);
-	},
-	components: {
-		"v-header": Header,
-		Sidebar
-	}
+    document.getElementById('home').addEventListener('mouseleave', function (e) {
+      mousePosition.x = canvas.width / 2;
+      mousePosition.y = canvas.height / 2;
+    });
+    //----------------------跟着鼠标动--------------------
+
+    createDots();
+    requestAnimationFrame(animateDots);
+  },
+  components: {
+    "v-header": Header,
+    Sidebar
+  }
 }
 </script>
 
 <style>
-#home{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	color: #fff;
-	/* box-sizing: border-box; */
-	overflow-x: hidden;
-	background: rgba(7,17,27,0.95);
+#home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  /* box-sizing: border-box; */
+  overflow-x: hidden;
+  background: rgba(7, 17, 27, 0.95);
 }
 .canvas {
-    position: fixed;
-    z-index: 1;
+  position: fixed;
+  z-index: 1;
 }
-#home a{
-	color: #fff;
-	display: block;
+#home a {
+  color: #fff;
+  display: block;
 }
-.content{
-	/* height: 100%; */
-	/* margin-top: -50px; */
-	display: flex;
-}
-
-.content section{
-	flex: 1;
-	z-index: 11;
-	margin-left: 200px;
-	/* box-sizing: border-box; */
-	/* padding-right: 60px; */
+.content {
+  /* height: 100%; */
+  /* margin-top: -50px; */
+  display: flex;
 }
 
-table{
-	position: absolute;
-	top: 100px;
-	padding: 0 20px;
-	width: 100%;
-}
-table thead tr{
-	border-bottom: 2px solid #fff;
-}
-table tbody tr{
-	border-bottom: 1px solid #fff;
-}
-table tr{
-	height: 50px;
-}
-table tr td{
-	text-align: center;
-	cursor: pointer;
-}
-table tr td:last-child{
-	width: 10%;
-}
-table tr th{
-	font-weight: normal;
-	cursor: pointer;
+.content section {
+  flex: 1;
+  z-index: 11;
+  margin-left: 200px;
+  /* box-sizing: border-box; */
+  /* padding-right: 60px; */
 }
 
-.search-bar{
-	position: absolute;
-	top: 20px;
-	left: 10%;
-	width: 400px;
-	height: 46px;
-	line-height: 46px;
+table {
+  position: absolute;
+  top: 100px;
+  padding: 0 20px;
+  width: 100%;
 }
-.search-bar .input-wrap{
-	float: left;
-	width: 270px;
-	height: 40px;
-	padding: 0 15px;
-	line-height: 40px;
-	border: none;
-	outline: none;
-	font-size: 20px;
-	border-radius: 20px 0 0 20px;
-	background: rgba(255, 255, 255, 0.2);
-	transition: all .8s;
+table thead tr {
+  border-bottom: 2px solid #fff;
 }
-.search-bar .input-wrap:focus{
-	background: rgba(255, 255, 255, .8);
+table tbody tr {
+  border-bottom: 1px solid #fff;
 }
-.search-bar .input-button{
-	float: left;
-	width: 50px;
-	height: 38px;
-	line-height: 38px;
-	text-align: center;
-	font-size: 14px;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	transition: all .8s;
+table tr {
+  height: 50px;
 }
-.search-bar .input-wrap:focus .input-botton{
-	border-color: rgba(255, 255, 255, 0.8);
+table tr td {
+  text-align: center;
+  cursor: pointer;
+}
+table tr td:last-child {
+  width: 10%;
+}
+table tr th {
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.search-bar {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  width: 400px;
+  height: 46px;
+  line-height: 46px;
+}
+.search-bar .input-wrap {
+  float: left;
+  width: 270px;
+  height: 40px;
+  padding: 0 15px;
+  line-height: 40px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-radius: 20px 0 0 20px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.8s;
+}
+.search-bar .input-wrap:focus {
+  background: rgba(255, 255, 255, 0.8);
+}
+.search-bar .input-button {
+  float: left;
+  width: 50px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.8s;
+}
+.search-bar .input-wrap:focus .input-botton {
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 .fade-enter-active {
-  	transition: all .5s
+  transition: all 0.5s;
 }
-.fade-enter, .fade-leave-active {
-  	opacity: 0;
-  	transform: rotate( -70deg ) translateX( 300px );
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+  transform: rotate(-70deg) translateX(300px);
 }
-
 </style>
