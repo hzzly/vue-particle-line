@@ -1,9 +1,15 @@
 {
   "name": "vue-particle-line",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "基于 Vue 的线性粒子背景",
   "main": "dist/vue-particle-line.umd.min.js",
-  "keyword": "vue-particle-line particle vue",
+  "keywords": [
+    "vue-particle-line",
+    "particle-line",
+    "particle",
+    "vue"
+  ],
+  "license": "MIT",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -24,7 +30,12 @@
     "lint-staged": "^8.1.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
+    "vue-particle-line": "^0.1.0",
     "vue-template-compiler": "^2.5.21"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hzzly/vue-particle-line.git"
   },
   "lint-staged": {
     "*.js": [

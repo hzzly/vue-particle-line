@@ -13,6 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 .banner {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

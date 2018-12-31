@@ -8,7 +8,8 @@ npm install vue-particle-line --save
 ### Main.js file
 ```javascript
 import Vue from 'vue'
-import vueParticleLine from 'packages/index.js'
+import vueParticleLine from 'vue-particle-line'
+import 'vue-particle-line/dist/vue-particle-line.css'
 Vue.use(vueParticleLine)
 ```
 
