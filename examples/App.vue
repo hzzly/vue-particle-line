@@ -30,7 +30,7 @@ export default {
 html, body, #app {
   width: 100%;
   height: 100%;
-  background: #34393f;
+  background: #283644;
 }
 #app {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
