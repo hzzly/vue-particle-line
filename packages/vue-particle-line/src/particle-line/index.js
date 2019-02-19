@@ -27,11 +27,27 @@ export default class ParticleLine {
       d_radius: 10, // 150
       array: []
     }
+    // this.dots = {
+    //   nb: 250, // 250
+    //   distance: 100, // 100
+    //   d_radius: 150, // 150
+    //   array: []
+    // }
     this.canvas = canvas
     this.ctx = ctx
     this.color = new Color()
     this.createDots(ctx, canvas.width, canvas.height)
     requestAnimationFrame(this.animateDots.bind(this))
+    // console.log(this.dots.array)
+    // canvas.addEventListener('mousemove', e => {
+    //   // console.log(this.ctx, this.canvas.width, this.canvas.height, e.pageX, e.pageY)
+    //   // // console.log(e.pageY)
+    //   // this.dots.array.push(new Dot(this.ctx, this.canvas.width, this.canvas.height, e.pageX, e.pageY))
+    //   // this.connectDots()
+    //   this.mousePosition.x = e.pageX
+    //   this.mousePosition.y = e.pageY
+    //   // console.log(this.dots.array)
+    // })
   }
 
   resize () {

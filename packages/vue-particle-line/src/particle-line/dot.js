@@ -1,10 +1,10 @@
 import Color from './color'
 
 export default class Dot {
-  constructor (ctx, canvasWidth, canvasHeight) {
+  constructor (ctx, canvasWidth, canvasHeight, x, y) {
     this.ctx = ctx
-    this.x = Math.random() * canvasWidth
-    this.y = Math.random() * canvasHeight
+    this.x = x || Math.random() * canvasWidth
+    this.y = y || Math.random() * canvasHeight
     this._init()
   }
 
