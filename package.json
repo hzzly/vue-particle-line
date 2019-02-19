@@ -13,7 +13,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --dest doc",
+    "build": "vue-cli-service build --dest docs",
     "build-lib": "vue-cli-service build --target lib --name vue-particle-line packages/index.js",
     "lint": "vue-cli-service lint"
   },
