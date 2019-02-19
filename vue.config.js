@@ -6,6 +6,9 @@ function resolve(dir) {
 
 module.exports = {
   // 修改 src 目录 为 examples 目录
+  baseUrl: process.env.NODE_ENV === 'production'
+    ? '/vue-particle-line/'
+    : '/',
   pages: {
     index: {
       entry: 'examples/main.js',
