@@ -30,6 +30,8 @@
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.0",
     "node-sass": "^4.11.0",
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.15.0",
     "sass-loader": "^7.1.0",
     "vue-particle-line": "^0.1.0",
     "vue-template-compiler": "^2.5.21"

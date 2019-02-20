@@ -1,3 +1,7 @@
+import 'normalize.css/normalize.css'
+import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-okaidia.css'
+
 import Vue from 'vue'
 import App from './App.vue'
 
