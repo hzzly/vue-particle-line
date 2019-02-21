@@ -4,17 +4,20 @@
       <banner :text="title"/>
     </vue-particle-line>
     <usage />
+    <foot />
   </div>
 </template>
 
 <script>
 import banner from './components/banner'
 import usage from './components/usage'
+import foot from './components/footer'
 export default {
   name: 'app',
   components: {
     banner,
-    usage
+    usage,
+    foot
   },
   data () {
     return {
@@ -103,5 +106,8 @@ h3 {
 }
 .text-center {
   text-align: center;
+}
+.footer {
+  margin: 1rem 0;
 }
 </style>
