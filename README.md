@@ -25,6 +25,11 @@ Vue.use(vueParticleLine)
 ```
 
 ### Props
-```
-编写中
-```
+
+| Prop         | Type    | Default  | Description   |
+| -------      | -----   | :------: |  -----------  |
+| lineWidth    | Number  |  0.3     |  connect line width   |
+| dotsNumber   | Number  |  100     |  dot number   |
+| dotsDistance | Number  |  100     |  far as points to connect   |
+| hoverEffect  | Boolean |  true    |  mouse hover events   |
+
