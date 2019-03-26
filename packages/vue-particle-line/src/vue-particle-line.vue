@@ -9,13 +9,37 @@
 
 <script>
 import ParticleLine from './particle-line'
-import { debounce } from 'common/js/utils'
+// import { debounce } from 'common/js/utils'
 export default {
   name: 'vue-particle-line',
+  props: {
+    lineWidth: {
+      type: Number,
+      default: 0.3
+    },
+    dotsNumber: {
+      type: Number,
+      default: 100
+    },
+    dotsDistance: {
+      type: Number,
+      default: 100
+    },
+    hoverEffect: {
+      type: Boolean,
+      default: true
+    }
+  },
   mounted () {
-    const particleLine = new ParticleLine('canvas')
-    particleLine.init()
-    window.onresize = debounce(() => particleLine.resize(), 500)
+    /* eslint-disable no-new */
+    new ParticleLine('canvas', {
+      lineWidth: this.lineWidth,
+      dotsNumber: this.dotsNumber,
+      dotsDistance: this.dotsDistance,
+      hoverEffect: this.hoverEffect
+    })
+    // particleLine.init()
+    // window.onresize = debounce(() => particleLine.resize(), 500)
   }
 }
 </script>
@@ -26,8 +50,7 @@ export default {
   width: 100%;
   height: 100%;
   .slot-wraper {
-    height: 100%;
-    z-index: 99;
+    z-index: 1;
   }
   .canvas {
     position: absolute;

@@ -49,7 +49,6 @@ body,
   text-align: center;
   color: #fff;
   .banner-wraper {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

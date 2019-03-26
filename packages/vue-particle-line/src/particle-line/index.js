@@ -8,6 +8,7 @@ export default class ParticleLine {
   constructor (tagId, options) {
     this.tagId = tagId
     this.options = options
+    this.init()
   }
 
   init () {
@@ -17,37 +18,28 @@ export default class ParticleLine {
     canvas.height = document.body.clientHeight > minHeight ? document.body.clientHeight : minHeight
     ctx.lineWidth = (this.options && this.options.lineWidth) || 0.3
     ctx.strokeStyle = (new Color(150)).style
-    this.mousePosition = {
-      x: 30 * canvas.width / 100,
-      y: 30 * canvas.height / 100
-    }
     this.dots = {
-      nb: 100, // 250
-      distance: 80, // 100
-      d_radius: 10, // 150
+      nb: (this.options && this.options.dotsNumber) || 100,
+      distance: (this.options && this.options.dotsDistance) || 100,
       array: []
     }
-    // this.dots = {
-    //   nb: 250, // 250
-    //   distance: 100, // 100
-    //   d_radius: 150, // 150
-    //   array: []
-    // }
     this.canvas = canvas
     this.ctx = ctx
     this.color = new Color()
-    this.createDots(ctx, canvas.width, canvas.height)
-    requestAnimationFrame(this.animateDots.bind(this))
-    // console.log(this.dots.array)
-    // canvas.addEventListener('mousemove', e => {
-    //   // console.log(this.ctx, this.canvas.width, this.canvas.height, e.pageX, e.pageY)
-    //   // // console.log(e.pageY)
-    //   // this.dots.array.push(new Dot(this.ctx, this.canvas.width, this.canvas.height, e.pageX, e.pageY))
-    //   // this.connectDots()
-    //   this.mousePosition.x = e.pageX
-    //   this.mousePosition.y = e.pageY
-    //   // console.log(this.dots.array)
-    // })
+    this.createDots(this.ctx, this.canvas.width, this.canvas.height)
+    this.animateDots()
+    this.hoverEffect()
+  }
+
+  hoverEffect () {
+    if (this.options && this.options.hoverEffect) {
+      this.canvas.addEventListener('mousemove', e => {
+        if (this.dots.array.length > this.dots.nb) {
+          this.dots.array.pop()
+        }
+        this.dots.array.push(new Dot(this.ctx, this.canvas.width, this.canvas.height, e.pageX, e.pageY))
+      })
+    }
   }
 
   resize () {
@@ -73,7 +65,7 @@ export default class ParticleLine {
 
   createDots (ctx, canvasWidth, canvasHeight) {
     this.dots.array = []
-    for (let i = 0; i < this.dots.nb; i++) { // TODO:屏幕变化应该添加进去，不是替换
+    for (let i = 0; i < this.dots.nb; i++) {
       this.dots.array.push(new Dot(ctx, canvasWidth, canvasHeight))
     }
   }
@@ -94,19 +86,11 @@ export default class ParticleLine {
   }
 
   connectDots () {
-    for (let i = 0; i < this.dots.nb; i++) {
-      for (let j = 0; j < this.dots.nb; j++) {
+    for (let i = 0; i < this.dots.array.length; i++) {
+      for (let j = 0; j < this.dots.array.length; j++) {
         const iDot = this.dots.array[i]
         const jDot = this.dots.array[j]
         if ((iDot.x - jDot.x) < this.dots.distance && (iDot.y - jDot.y) < this.dots.distance && (iDot.x - jDot.x) > -this.dots.distance && (iDot.y - jDot.y) > -this.dots.distance) {
-          // if ((iDot.x - this.mousePosition.x) < this.dots.d_radius && (iDot.y - this.mousePosition.y) < this.dots.d_radius && (iDot.x - this.mousePosition.x) > -this.dots.d_radius && (iDot.y - this.mousePosition.y) > -this.dots.d_radius) {
-          //   this.ctx.beginPath()
-          //   this.ctx.strokeStyle = this.averageColorStyles(iDot, jDot)
-          //   this.ctx.moveTo(iDot.x, iDot.y)
-          //   this.ctx.lineTo(jDot.x, jDot.y)
-          //   this.ctx.stroke()
-          //   this.ctx.closePath()
-          // }
           this.ctx.beginPath()
           this.ctx.strokeStyle = this.averageColorStyles(iDot, jDot)
           this.ctx.moveTo(iDot.x, iDot.y)
@@ -119,7 +103,7 @@ export default class ParticleLine {
   }
 
   drawDots () {
-    for (let i = 0; i < this.dots.nb; i++) {
+    for (let i = 0; i < this.dots.array.length; i++) {
       const dot = this.dots.array[i]
       dot.draw()
     }
@@ -127,9 +111,9 @@ export default class ParticleLine {
 
   animateDots () {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    this.moveDots()
-    this.connectDots()
     this.drawDots()
+    this.connectDots()
+    this.moveDots()
     requestAnimationFrame(this.animateDots.bind(this))
   }
 }
