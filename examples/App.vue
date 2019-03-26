@@ -28,6 +28,7 @@ export default {
 </script>
 
 <style lang="scss">
+// 首页风格参考[vue-particles](https://vue-particles.netlify.com/)
 * {
   box-sizing: border-box;
 }

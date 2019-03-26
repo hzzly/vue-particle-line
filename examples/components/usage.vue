@@ -28,7 +28,49 @@ Vue.use(vueParticleLine)
     <br>
     <div class="wrap-table">
       <h4 class="white text-left">Props</h4>
-      <pre class="language-html">编写中</pre>
+      <!-- <pre class="language-html">编写中</pre> -->
+      <table class="rwd-table">
+
+        <thead>
+          <tr>
+            <th>Prop</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+
+        <tr>
+          <td data-th="Prop">lineWidth</td>
+          <td data-th="Type">String</td>
+          <td data-th="Default">0.3</td>
+          <td data-th="Description">Lines width</td>
+        </tr>
+        <tr>
+          <td data-th="Name">dotsNumber</td>
+          <td data-th="Type">Number</td>
+          <td data-th="Default">100</td>
+          <td data-th="Description">
+            Dots Number
+          </td>
+        </tr>
+        <tr>
+          <td data-th="Name">dotsDistance</td>
+          <td data-th="Type">Number</td>
+          <td data-th="Default">100</td>
+          <td data-th="Description">
+            Far as points to connect
+          </td>
+        </tr>
+        <tr>
+          <td data-th="Name">hoverEffect</td>
+          <td data-th="Type">Boolean</td>
+          <td data-th="Default">true</td>
+          <td data-th="Description">
+            Mouse hover events
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>
@@ -56,6 +98,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$breakpoint-alpha: 767px;
 .main-section {
   max-width: 650px;
   margin: auto;
@@ -73,16 +116,75 @@ export default {
     text-shadow: 8px 8px #000000;
     text-transform: uppercase;
     margin: 0;
-    @media (max-width: 767px) {
+    @media (max-width: $breakpoint-alpha) {
       font-size: 3rem;
     }
   }
-  // p.subtitle {
-  //   font-size: 1.7rem;
-  //   margin: 0;
-  //   @media (max-width: 767px) {
-  //     font-size: 1rem;
-  //   }
-  // }
+}
+.rwd-table {
+  margin: 1em 0;
+  min-width: 300px;
+  tr {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+  th {
+    display: none;
+  }
+  td {
+    display: block;
+    &:first-child {
+      padding-top: .5em;
+    }
+    &:last-child {
+      padding-bottom: .5em;
+    }
+    &:before {
+      content: attr(data-th)": ";
+      font-weight: bold;
+      width: 6.5em;
+      display: inline-block;
+      @media (min-width: $breakpoint-alpha) {
+        display: none;
+      }
+    }
+  }
+  th, td {
+    text-align: left;
+    @media (min-width: $breakpoint-alpha) {
+      display: table-cell;
+      padding: .25em .5em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.rwd-table {
+  width: 100%;
+  color: #fff;
+  overflow: hidden;
+  background: #292929;
+  border-radius: 3px;
+  box-shadow: 2px 6px 17px rgba(0, 0, 0, 0.39);
+  padding: .5rem;
+  tr {
+    border-color: lighten(#34495E, 10%);
+  }
+  th, td {
+    margin: .5em 1em;
+    @media (min-width: $breakpoint-alpha) {
+      padding: 1em !important;
+    }
+  }
+  th, td:before {
+    color: #dd5;
+  }
 }
 </style>
