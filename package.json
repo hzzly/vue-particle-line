@@ -1,6 +1,6 @@
 {
   "name": "vue-particle-line",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "基于 Vue 的线性粒子背景",
   "main": "dist/vue-particle-line.umd.min.js",
   "keywords": [

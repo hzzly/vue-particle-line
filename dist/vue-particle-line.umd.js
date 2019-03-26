@@ -96,17 +96,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ "1b6c":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06c79e02_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("782a");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06c79e02_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06c79e02_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06c79e02_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "2b43":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -126,12 +115,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/_cache-loader@1.2.5@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2bf59b84-vue-loader-template"}!./node_modules/_vue-loader@15.4.2@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@1.2.5@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.4.2@vue-loader/lib??vue-loader-options!./packages/vue-particle-line/src/vue-particle-line.vue?vue&type=template&id=06c79e02&scoped=true&
+// CONCATENATED MODULE: ./node_modules/_cache-loader@1.2.5@cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"2bf59b84-vue-loader-template"}!./node_modules/_vue-loader@15.4.2@vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/_cache-loader@1.2.5@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.4.2@vue-loader/lib??vue-loader-options!./packages/vue-particle-line/src/vue-particle-line.vue?vue&type=template&id=06727b55&scoped=true&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"vue-particle-line"},[_c('div',{staticClass:"slot-wraper"},[_vm._t("default")],2),_c('canvas',{staticClass:"canvas",attrs:{"id":"canvas"}})])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./packages/vue-particle-line/src/vue-particle-line.vue?vue&type=template&id=06c79e02&scoped=true&
+// CONCATENATED MODULE: ./packages/vue-particle-line/src/vue-particle-line.vue?vue&type=template&id=06727b55&scoped=true&
 
 // CONCATENATED MODULE: ./packages/vue-particle-line/src/particle-line/color.js
 class Color {
@@ -160,10 +149,10 @@ class Color {
 
 
 class dot_Dot {
-  constructor (ctx, canvasWidth, canvasHeight) {
+  constructor (ctx, canvasWidth, canvasHeight, x, y) {
     this.ctx = ctx
-    this.x = Math.random() * canvasWidth
-    this.y = Math.random() * canvasHeight
+    this.x = x || Math.random() * canvasWidth
+    this.y = y || Math.random() * canvasHeight
     this._init()
   }
 
@@ -193,6 +182,7 @@ class particle_line_ParticleLine {
   constructor (tagId, options) {
     this.tagId = tagId
     this.options = options
+    this.init()
   }
 
   init () {
@@ -202,21 +192,28 @@ class particle_line_ParticleLine {
     canvas.height = document.body.clientHeight > minHeight ? document.body.clientHeight : minHeight
     ctx.lineWidth = (this.options && this.options.lineWidth) || 0.3
     ctx.strokeStyle = (new Color(150)).style
-    this.mousePosition = {
-      x: 30 * canvas.width / 100,
-      y: 30 * canvas.height / 100
-    }
     this.dots = {
-      nb: 100, // 250
-      distance: 80, // 100
-      d_radius: 10, // 150
+      nb: (this.options && this.options.dotsNumber) || 100,
+      distance: (this.options && this.options.dotsDistance) || 100,
       array: []
     }
     this.canvas = canvas
     this.ctx = ctx
     this.color = new Color()
-    this.createDots(ctx, canvas.width, canvas.height)
-    requestAnimationFrame(this.animateDots.bind(this))
+    this.createDots(this.ctx, this.canvas.width, this.canvas.height)
+    this.animateDots()
+    this.hoverEffect()
+  }
+
+  hoverEffect () {
+    if (this.options && this.options.hoverEffect) {
+      this.canvas.addEventListener('mousemove', e => {
+        if (this.dots.array.length > this.dots.nb) {
+          this.dots.array.pop()
+        }
+        this.dots.array.push(new dot_Dot(this.ctx, this.canvas.width, this.canvas.height, e.pageX, e.pageY))
+      })
+    }
   }
 
   resize () {
@@ -242,7 +239,7 @@ class particle_line_ParticleLine {
 
   createDots (ctx, canvasWidth, canvasHeight) {
     this.dots.array = []
-    for (let i = 0; i < this.dots.nb; i++) { // TODO:屏幕变化应该添加进去，不是替换
+    for (let i = 0; i < this.dots.nb; i++) {
       this.dots.array.push(new dot_Dot(ctx, canvasWidth, canvasHeight))
     }
   }
@@ -263,19 +260,11 @@ class particle_line_ParticleLine {
   }
 
   connectDots () {
-    for (let i = 0; i < this.dots.nb; i++) {
-      for (let j = 0; j < this.dots.nb; j++) {
+    for (let i = 0; i < this.dots.array.length; i++) {
+      for (let j = 0; j < this.dots.array.length; j++) {
         const iDot = this.dots.array[i]
         const jDot = this.dots.array[j]
         if ((iDot.x - jDot.x) < this.dots.distance && (iDot.y - jDot.y) < this.dots.distance && (iDot.x - jDot.x) > -this.dots.distance && (iDot.y - jDot.y) > -this.dots.distance) {
-          // if ((iDot.x - this.mousePosition.x) < this.dots.d_radius && (iDot.y - this.mousePosition.y) < this.dots.d_radius && (iDot.x - this.mousePosition.x) > -this.dots.d_radius && (iDot.y - this.mousePosition.y) > -this.dots.d_radius) {
-          //   this.ctx.beginPath()
-          //   this.ctx.strokeStyle = this.averageColorStyles(iDot, jDot)
-          //   this.ctx.moveTo(iDot.x, iDot.y)
-          //   this.ctx.lineTo(jDot.x, jDot.y)
-          //   this.ctx.stroke()
-          //   this.ctx.closePath()
-          // }
           this.ctx.beginPath()
           this.ctx.strokeStyle = this.averageColorStyles(iDot, jDot)
           this.ctx.moveTo(iDot.x, iDot.y)
@@ -288,7 +277,7 @@ class particle_line_ParticleLine {
   }
 
   drawDots () {
-    for (let i = 0; i < this.dots.nb; i++) {
+    for (let i = 0; i < this.dots.array.length; i++) {
       const dot = this.dots.array[i]
       dot.draw()
     }
@@ -296,24 +285,10 @@ class particle_line_ParticleLine {
 
   animateDots () {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
-    this.moveDots()
-    this.connectDots()
     this.drawDots()
+    this.connectDots()
+    this.moveDots()
     requestAnimationFrame(this.animateDots.bind(this))
-  }
-}
-
-// CONCATENATED MODULE: ./common/js/utils.js
-function debounce (func, delay) {
-  let timer
-
-  return function (...args) {
-    if (timer) {
-      clearTimeout(timer)
-    }
-    timer = setTimeout(() => {
-      func.apply(this, args)
-    }, delay)
   }
 }
 
@@ -329,20 +304,44 @@ function debounce (func, delay) {
 //
 
 
-
+// import { debounce } from 'common/js/utils'
 /* harmony default export */ var vue_particle_linevue_type_script_lang_js_ = ({
   name: 'vue-particle-line',
+  props: {
+    lineWidth: {
+      type: Number,
+      default: 0.3
+    },
+    dotsNumber: {
+      type: Number,
+      default: 100
+    },
+    dotsDistance: {
+      type: Number,
+      default: 100
+    },
+    hoverEffect: {
+      type: Boolean,
+      default: true
+    }
+  },
   mounted () {
-    const particleLine = new particle_line_ParticleLine('canvas')
-    particleLine.init()
-    window.onresize = debounce(() => particleLine.resize(), 500)
+    /* eslint-disable no-new */
+    new particle_line_ParticleLine('canvas', {
+      lineWidth: this.lineWidth,
+      dotsNumber: this.dotsNumber,
+      dotsDistance: this.dotsDistance,
+      hoverEffect: this.hoverEffect
+    })
+    // particleLine.init()
+    // window.onresize = debounce(() => particleLine.resize(), 500)
   }
 });
 
 // CONCATENATED MODULE: ./packages/vue-particle-line/src/vue-particle-line.vue?vue&type=script&lang=js&
  /* harmony default export */ var src_vue_particle_linevue_type_script_lang_js_ = (vue_particle_linevue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./packages/vue-particle-line/src/vue-particle-line.vue?vue&type=style&index=0&id=06c79e02&lang=scss&scoped=true&
-var vue_particle_linevue_type_style_index_0_id_06c79e02_lang_scss_scoped_true_ = __webpack_require__("1b6c");
+// EXTERNAL MODULE: ./packages/vue-particle-line/src/vue-particle-line.vue?vue&type=style&index=0&id=06727b55&lang=scss&scoped=true&
+var vue_particle_linevue_type_style_index_0_id_06727b55_lang_scss_scoped_true_ = __webpack_require__("7bb6");
 
 // CONCATENATED MODULE: ./node_modules/_vue-loader@15.4.2@vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
@@ -454,7 +453,7 @@ var component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "06c79e02",
+  "06727b55",
   null
   
 )
@@ -511,7 +510,18 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 /***/ }),
 
-/***/ "782a":
+/***/ "7bb6":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06727b55_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("8787");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06727b55_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06727b55_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_0_5_0_mini_css_extract_plugin_dist_loader_js_ref_8_oneOf_1_0_node_modules_css_loader_1_0_1_css_loader_index_js_ref_8_oneOf_1_1_node_modules_vue_loader_15_4_2_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_3_0_0_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_sass_loader_7_1_0_sass_loader_lib_loader_js_ref_8_oneOf_1_3_node_modules_cache_loader_1_2_5_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_15_4_2_vue_loader_lib_index_js_vue_loader_options_vue_particle_line_vue_vue_type_style_index_0_id_06727b55_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "8787":
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
