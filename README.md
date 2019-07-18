@@ -1,5 +1,8 @@
 ## vue-particle-line
 
+![NPM version](https://img.shields.io/npm/v/vue-particle-line.svg)
+![MIT Licence](https://img.shields.io/npm/l/vue-particle-line.svg)
+
 ### How to use
 ```
 npm install vue-particle-line --save
@@ -32,4 +35,8 @@ Vue.use(vueParticleLine)
 | dotsNumber   | Number  |  100     |  dot number   |
 | dotsDistance | Number  |  100     |  far as points to connect   |
 | hoverEffect  | Boolean |  true    |  mouse hover events   |
+
+### License
+
+MIT
 
